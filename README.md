@@ -3,6 +3,7 @@ Semi-Supervised Missing Values Imputation
 
 This weka package includes the Iterative Robust Semi-Supervised based Imputation (IRSSI) for Missing Data algorithm. The package is based on the repository https://github.com/fracpete/missing-values-imputation-weka-package .
 
+* Weka package manager install url: https://github.com/fazakis/semi-supervised-missing-values-imputation-weka-package/releases/download/v2019.7.14/semi-supervised-missing-values-imputation-2019.7.14.zip
 
 Missing Values Imputation
 -------------------------
