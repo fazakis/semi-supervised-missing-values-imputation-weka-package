@@ -33,7 +33,7 @@ import java.util.Vector;
 
 /**
  * Ancestor for injection algorithms that work on a range of attributes only.
- * 
+ *
  * @author  fracpete (fracpete at waikato dot ac dot nz)
  * @version $Revision$
  */
@@ -51,7 +51,7 @@ public abstract class AbstractInjectionWithRange
 
   /** the range of attributes to work on. */
   protected Range m_Cols = new Range(getDefaultAttributeIndices());
-  
+
   /** the indices to work on. */
   protected int[] m_Indices;
 
@@ -60,7 +60,7 @@ public abstract class AbstractInjectionWithRange
 
   /**
    * Returns an enumeration describing the available options.
-   * 
+   *
    * @return an enumeration of all the available options.
    */
   @Override
@@ -73,7 +73,7 @@ public abstract class AbstractInjectionWithRange
         RANGE, 1, "-" + RANGE + " <col1,col2,...>"));
 
     result.addElement(new Option(
-	"\tInverts the matching sense.", 
+	"\tInverts the matching sense.",
 	INVERT_MATCHING, 0, "-" + INVERT_MATCHING));
 
     result.addAll(Collections.list(super.listOptions()));
@@ -83,7 +83,7 @@ public abstract class AbstractInjectionWithRange
 
   /**
    * Gets the current settings of the filter.
-   * 
+   *
    * @return an array of strings suitable for passing to setOptions
    */
   @Override
@@ -103,7 +103,7 @@ public abstract class AbstractInjectionWithRange
 
   /**
    * Parses a given list of options.
-   * 
+   *
    * @param options the list of options as an array of strings
    * @throws Exception if an option is not supported
    */
@@ -135,7 +135,7 @@ public abstract class AbstractInjectionWithRange
 
   /**
    * Sets the columns to use, e.g., first-last or first-3,5-last
-   * 
+   *
    * @param value the columns to use
    */
   public void setAttributeIndices(String value) {
@@ -144,7 +144,7 @@ public abstract class AbstractInjectionWithRange
 
   /**
    * Gets the selection of the columns, e.g., first-last or first-3,5-last
-   * 
+   *
    * @return the selected indices
    */
   public String getAttributeIndices() {
@@ -153,7 +153,7 @@ public abstract class AbstractInjectionWithRange
 
   /**
    * Returns the tip text for this property
-   * 
+   *
    * @return tip text for this property suitable for displaying in the
    *         explorer/experimenter gui
    */
@@ -163,7 +163,7 @@ public abstract class AbstractInjectionWithRange
 
   /**
    * Sets whether the selection of the indices is inverted or not.
-   * 
+   *
    * @param value the new invert setting
    */
   public void setInvertSelection(boolean value) {
@@ -172,7 +172,7 @@ public abstract class AbstractInjectionWithRange
 
   /**
    * Gets whether the selection of the columns is inverted.
-   * 
+   *
    * @return true if the selection is inverted
    */
   public boolean getInvertSelection() {
@@ -181,7 +181,7 @@ public abstract class AbstractInjectionWithRange
 
   /**
    * Returns the tip text for this property
-   * 
+   *
    * @return tip text for this property suitable for displaying in the
    *         explorer/experimenter gui
    */
@@ -190,15 +190,15 @@ public abstract class AbstractInjectionWithRange
   }
 
   /**
-   * Hook method to perform some initializations before 
+   * Hook method to perform some initializations before
    * {@link #doBuildInjection(Instances)} is called.
-   * 
+   *
    * @param data	the training data
    */
   @Override
   protected void initInjection(Instances data) {
     super.initInjection(data);
-    m_Cols.setUpper(data.numAttributes() - 1);
+    m_Cols.setUpper(data.numAttributes() - 2); //Modification in order to exclude class from injection
     m_Indices = m_Cols.getSelection();
     m_IndicesSet = new HashSet<Integer>();
     for (int index: m_Indices)

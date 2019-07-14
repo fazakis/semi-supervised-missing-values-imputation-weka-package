@@ -1,14 +1,14 @@
 # Template Description file for a Weka package
-# 
+#
 
 # Package name (required)
-PackageName=missing-values-imputation
+PackageName=semi-supervised-missing-values-imputation
 
 # Version (required)
-Version=2016.6.12
+Version=2019.7.14
 
 #Date (year-month-day)
-Date=2016-06-12
+Date=2019-07-14
 
 # Title (required)
 Title=Missing Values Imputation/Injection
@@ -17,22 +17,22 @@ Title=Missing Values Imputation/Injection
 Category=Preprocessing
 
 # Author (required)
-Author=Peter Reutemann <fracpete@waikato.ac.nz>
+Author=Nikos Fazakis <fazakis@ece.upatras.gr>
 
 # Maintainer (required)
-Maintainer=Peter Reutemann <fracpete@waikato.ac.nz>
+Maintainer=Nikos Fazakis <fazakis@ece.upatras.gr>
 
 # License (required)
 License=GPL 3.0
 
 # Description (required)
-Description=Contains various algorithms for missing values imputation and injection.
+Description=Contains IRSSI and various algorithms for missing values imputation and injection.
 
 # Package URL for obtaining the package archive (required)
-PackageURL=https://github.com/fracpete/missing-values-imputation-weka-package/releases/download/v2016.6.12/missing-values-imputation-2016.6.12.zip
+PackageURL=https://github.com/fazakis/semi-supervised-missing-values-imputation-weka-package/releases/download/v2019.7.14/semi-supervised-missing-values-imputation-2019.7.14.zip
 
 # URL for further information
-URL=https://github.com/fracpete/missing-values-imputation-weka-package
+URL=https://github.com/fazakis/semi-supervised-missing-values-imputation-weka-package
 
 # Enhances various other packages ?
 Enhances=
@@ -68,7 +68,7 @@ Depends=weka (>=3.7.13)
 # Java3D, which installs itself into the system JRE/JDK. (optional)
 #DoNotLoadIfClassNotPresent=com.some.class.from.some.Where,org.some.other.Class,...
 
-# Log message to be displayed if package can't be loaded due to 
+# Log message to be displayed if package can't be loaded due to
 # missing classes. (optional).
 #DoNotLoadIfClassNotPresentMessage=funkyPackage can't be loaded because \
 # com.funky.FunkyClass can't be instantiated. Have you downloaded and run \

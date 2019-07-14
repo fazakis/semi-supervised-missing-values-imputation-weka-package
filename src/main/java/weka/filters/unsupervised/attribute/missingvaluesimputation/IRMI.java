@@ -73,23 +73,23 @@ import java.util.Vector;
  *
  <!-- options-start -->
  * Valid options are: <p>
- * 
+ *
  * <pre> -nominal-classifier &lt;classname + options&gt;
  *  Nominal classifier to use
  *  (default: : No model built yet.)</pre>
- * 
+ *
  * <pre> -numeric-classifier &lt;classname + options&gt;
  *  Nominal classifier to use
  *  (default: Linear Regression: No model built yet.)</pre>
- * 
+ *
  * <pre> -num-epochs &lt;int&gt;
  *  Max number of epochs
- *  (default: 100)</pre>
- * 
+ *  (default: 10)</pre>
+ *
  * <pre> -epsilon &lt;double&gt;
  *  Epsilon for early termination
  *  (default: 5.0)</pre>
- * 
+ *
  <!-- options-end -->
  *
  * @author Chris Beckham
@@ -353,7 +353,7 @@ public class IRMI
    * @return the default
    */
   protected int getDefaultNumEpochs() {
-    return 100;
+    return 10; //Modified to increase execution speed
   }
 
   /**

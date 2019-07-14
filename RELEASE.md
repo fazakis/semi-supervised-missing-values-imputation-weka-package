@@ -7,16 +7,16 @@ Preparation
 * Change the artifact ID in `pom.xml` to today's date, e.g.:
 
   ```
-  2016.6.6-SNAPSHOT
+  2019.7.14-SNAPSHOT
   ```
 
 * Update the version, date and URL in `Description.props` to reflect new
   version, e.g.:
 
   ```
-  Version=2016.6.6
-  Date=2016-06-06
-  PackageURL=https://github.com/fracpete/missing-values-imputation-weka-package/releases/download/v2016.6.6/missing-values-imputation-2016.6.6.zip
+  Version=2019.7.14
+  Date=2019-07-14
+  PackageURL=https://github.com/fazakis/semi-supervised-missing-values-imputation-weka-package/releases/download/v2019.7.14/semi-supervised-missing-values-imputation-2019.7.14.zip
   ```
 
 * Commit/push all changes
@@ -26,13 +26,13 @@ Weka package
 ------------
 
 * Run the following command to generate the package archive for version
-  `2016.6.6`:
+  `2019.7.14`:
 
   ```
-  ant -f build_package.xml -Dpackage=missing-values-imputation-2016.6.6 clean make_package
+  ant -f build_package.xml -Dpackage=semi-supervised-missing-values-imputation-2019.7.14 clean make_package
   ```
 
-* Create a release tag on github (`v2016.6.6`)
+* Create a release tag on github (`v2019.7.14`)
 * add release notes
 * upload package archive from `dist`
 * add link to this zip file in the `Releases` section of the `README.md` file
